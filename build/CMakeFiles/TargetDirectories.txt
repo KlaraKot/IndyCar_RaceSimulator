@@ -1,0 +1,3 @@
+/Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/build/CMakeFiles/IndyCar_RaceSimulator.dir
+/Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/build/CMakeFiles/edit_cache.dir
+/Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,32 @@
+race:
+  name: "Indy 500"
+  number_of_laps: 4
+  number_of_cars: 3
+  teams:
+    - name: "Team A"
+      driver_name: "Alex Palou"
+      position: 1
+      strategy:
+        version: "A"
+        first_tire: "S"
+        second_tire: "H"
+        accident: "yes"
+        accident_lap: 2
+    - name: "Team B"
+      driver_name: "Scott Dixon"
+      position: 2
+      strategy:
+        version: "B"
+        first_tire: "H"
+        second_tire: "S"
+        accident: "no"
+        accident_lap: null
+    - name: "Team C"
+      driver_name: "Josef Newgarden"
+      position: 3
+      strategy:
+        version: "A"
+        first_tire: "W"
+        second_tire: "H"
+        accident: "yes"
+        accident_lap: 1
