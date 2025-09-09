@@ -4,7 +4,7 @@
 
 RaceConfig RaceConfigParser::loadFromFile(const std::string& filename) {
     RaceConfig config;
-    
+
     try {
         YAML::Node root = YAML::LoadFile(filename);
         
@@ -70,41 +70,4 @@ RaceConfig RaceConfigParser::loadFromFile(const std::string& filename) {
     }
     
     return config;
-}
-
-void RaceConfigParser::saveToFile(const RaceConfig& config, const std::string& filename) {
-    YAML::Node root;
-    
-    YAML::Node race;
-    race["name"] = config.name;
-    race["number_of_laps"] = config.number_of_laps;
-    race["number_of_cars"] = config.number_of_cars;
-    
-    YAML::Node teams;
-    for (const auto& team : config.teams) {
-        YAML::Node teamNode;
-        teamNode["name"] = team.name;
-        teamNode["driver_name"] = team.driver_name;
-        teamNode["position"] = team.position;
-        
-        YAML::Node strategy;
-        strategy["version"] = team.strategy.version;
-        strategy["first_tire"] = team.strategy.first_tire;
-        strategy["second_tire"] = team.strategy.second_tire;
-        strategy["accident"] = team.strategy.accident;
-        if (team.strategy.accident_lap >= 0) {
-            strategy["accident_lap"] = team.strategy.accident_lap;
-        } else {
-            strategy["accident_lap"] = YAML::Null;
-        }
-        teamNode["strategy"] = strategy;
-        
-        teams.push_back(teamNode);
-    }
-    race["teams"] = teams;
-    
-    root["race"] = race;
-    
-    std::ofstream file(filename);
-    file << root;
 }

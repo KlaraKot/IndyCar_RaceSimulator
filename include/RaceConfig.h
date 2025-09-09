@@ -30,7 +30,6 @@ struct RaceConfig {
 class RaceConfigParser {
 public:
     static RaceConfig loadFromFile(const std::string& filename);
-    static void saveToFile(const RaceConfig& config, const std::string& filename);
 };
 
 #endif // RACECONFIG_H

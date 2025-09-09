@@ -14,8 +14,7 @@
 
 SimulationEngine::SimulationEngine() : currentWeather("sunny"), weatherChangeCounter(0), currentWeatherStrategy(nullptr) {
     // load race configuration from YAML file
-    std::string yamlFile = "race_config.yaml";
-    yamlFile = "../race_config.yaml";
+    std::string yamlFile = "../race_config.yml";
     if (std::ifstream(yamlFile).good()) {
         raceConfig = RaceConfigParser::loadFromFile(yamlFile);
     } else {
@@ -65,7 +64,6 @@ SimulationEngine::SimulationEngine() : currentWeather("sunny"), weatherChangeCou
         drivers.emplace_back("name", controllers[i]);
     }
     
-    // Create teams with configuration data
     for (size_t i = 0; i < cars.size() && i < raceConfig.teams.size(); ++i) {
         const auto& teamConfig = raceConfig.teams[i];
         teams.emplace_back(teamConfig.name, teamConfig.driver_name, cars[i], controllers[i]);
@@ -82,12 +80,6 @@ SimulationEngine::SimulationEngine() : currentWeather("sunny"), weatherChangeCou
     noecho();
     keypad(stdscr, TRUE);
 
-    // Initialize colors
-    if (has_colors() == FALSE) {
-        endwin();
-        printf("Your terminal does not support color\n");
-        exit(1);
-    }
     start_color();
 
     // Define color pairs for different cars
@@ -305,15 +297,6 @@ void SimulationEngine::drawRaceInfo() {
         mvprintw(lap_y + 1 + i, info_x, "Car %zu: Lap %d", i + 1, cars[i].getCurrentLap());
     }
     
-    // team strategy info
-    int strategy_y = lap_y + 5;
-    mvprintw(strategy_y, info_x, "Strategies:");
-    for (size_t i = 0; i < teams.size() && i < 3; ++i) {
-        mvprintw(strategy_y + 1 + i, info_x, "%s: %s/%s", 
-                 teams[i].teamName.c_str(), 
-                 teams[i].firstTire.c_str(), 
-                 teams[i].secondTire.c_str());
-    }
 }
 
 
@@ -333,7 +316,6 @@ void SimulationEngine::showRaceCompletion() {
     }
 
     mvprintw(center_y - 6, center_x - 15, "FINISH!");
-    mvprintw(center_y - 4, center_x - 20, "All cars have finished %d laps", raceConfig.number_of_laps);
     
     std::vector<std::pair<int, int>> results;
     for (size_t i = 0; i < cars.size(); ++i) {
@@ -361,7 +343,7 @@ void SimulationEngine::showRaceCompletion() {
         
         std::string position = (i == 0) ? "1st place" : (i == 1) ? "2nd place" : (i == 2) ? "3rd place" : "---";
         mvprintw(center_y + 3 + i, center_x - 20, "%s %2d. | %-8s | %-12s | %2d", 
-                 position, i + 1, teamName.c_str(), driverName.c_str(), lapCount);
+                 position.c_str(), i + 1, teamName.c_str(), driverName.c_str(), lapCount);
     }
     mvprintw(center_y + 11, center_x - 20, "Press x to exit");
     

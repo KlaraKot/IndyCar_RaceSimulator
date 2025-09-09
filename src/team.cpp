@@ -94,7 +94,6 @@ bool Team::shouldHaveAccident() const {
 
 void Team::triggerAccident() {
     hasAccidentOccurred = true;
-    std::cout << "ACCIDENT! " << teamName << " crashed on lap " << teamCar.getCurrentLap() << std::endl;
 }
 
 void Team::handleAccidentRecovery() {

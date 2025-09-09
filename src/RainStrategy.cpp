@@ -6,7 +6,7 @@ RainStrategy::RainStrategy(int intensity) : rainIntensity(intensity) {
     rules["weather"] = "rainy";
     rules["canSpeedUp"] = "no";
     rules["goToPitStop"] = "yes";
-    rules["tireType"] = "W";
+
 }
 
 std::string RainStrategy::getWeatherType() const {

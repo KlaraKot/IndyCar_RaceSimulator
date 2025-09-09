@@ -11,7 +11,7 @@ race:
         first_tire: "S"
         second_tire: "H"
         accident: "yes"
-        accident_lap: 2
+        accident_lap: null
     - name: "Team B"
       driver_name: "Scott Dixon"
       position: 2

@@ -55,7 +55,7 @@ int Car::getTireUseFromType(const std::string& tireType) {
     } else if (tireType == "W") {
         return 300;  // Wet tires
     } else {
-        return 300;  // Default value
+        return 300;  // Default tires
     }
 }
 
@@ -71,7 +71,6 @@ void Car::checkLapCompletion(int trackX, int trackY) {
     if (nearStart && backToStartDirection && !inPitStop && !hasCompletedLap) {
         currentLap++;
         hasCompletedLap = true;
-        std::cout << "Car completed lap " << currentLap << " at position (" << x << ", " << y << ")" << std::endl;
     }
     
 }

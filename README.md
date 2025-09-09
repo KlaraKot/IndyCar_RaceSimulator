@@ -5,7 +5,6 @@ A C++ console-based racing simulation with dynamic weather, pit stops, accidents
 ## 📋 Table of Contents
 
 - [Overview](#overview)
-- [Features](#features)
 - [Class Diagram](#class-diagram)
 - [Installation](#installation)
 - [Configuration](#configuration)
@@ -14,16 +13,6 @@ A C++ console-based racing simulation with dynamic weather, pit stops, accidents
 
 The Race Simulator is a text-based racing game built in C++ using the ncurses library. It simulates a multi-car race with realistic features including weather effects, pit stops, accidents, and lap counting.
 
-## ✨ Features
-
-- **Multi-car Racing**: Up to 3 cars racing simultaneously
-- **Dynamic Weather System**: Sunny and rainy conditions affect tire wear and speed
-- **Pit Stop Strategy**: Cars can pit for tire changes and repairs
-- **Accident System**: Cars can crash on specified laps and recover via pit stops
-- **Lap Tracking**: Accurate lap counting and race completion detection
-- **YAML Configuration**: Race parameters configurable via YAML files
-- **Real-time Display**: Live race information with ncurses interface
-- **Race Results**: Final standings and winner determination
 
 ## 🏗️ Class Diagram
 
@@ -33,15 +22,15 @@ The Race Simulator is a text-based racing game built in C++ using the ncurses li
 ├─────────────────┤    ├─────────────────┤    ├─────────────────┤
 │ - x, y: int     │    │ + driveAroundThe│    │ + drawCar()     │
 │ - size: int     │    │   Track()       │    │ + drawTrack()   │
-│ - direction: char│    │ + goToPitStop() │    │ + drawPitStop() │
+│ - direction: char│    │ + goToPitStop()│    │ + drawPitStop() │ 
 │ - decision: char│    │ + turnRight()   │    │                 │
-│ - inPitStop: bool│    │ + turnLeft()    │    │                 │
+│ - inPitStop: bool│    │ + turnLeft()   │    │                 │
 │ - firstTireType │    │ + turnUp()      │    │                 │
 │ - secondTireType│    │ + turnDown()    │    │                 │
 │ - pitStopPhase  │    │                 │    │                 │
 │ - currentLap    │    │                 │    │                 │
 │ - lastDirection │    │                 │    │                 │
-│ - hasCompletedLap│    │                 │    │                 │
+│ - hasCompletedLap│   │                 │    │                 │
 │ - startingX, Y  │    │                 │    │                 │
 │ - finishPosition│    │                 │    │                 │
 ├─────────────────┤    ├─────────────────┤    ├─────────────────┤
@@ -73,8 +62,8 @@ The Race Simulator is a text-based racing game built in C++ using the ncurses li
 ┌─────────────────────────────────────────────────────────────────────────────────┐
 │                                Team                                            │
 ├─────────────────────────────────────────────────────────────────────────────────┤
-│ - teamCar: Car&                                                               │
-│ - carController: CarController&                                               │
+│ - teamCar: Car&                                                                │
+│ - carController: CarController&                                                │
 │ - teamName: string                                                             │
 │ - driverName: string                                                           │
 │ - decision: string                                                             │
@@ -86,7 +75,7 @@ The Race Simulator is a text-based racing game built in C++ using the ncurses li
 │ - accidentLap: int                                                             │
 │ - hasAccidentOccurred: bool                                                    │
 ├─────────────────────────────────────────────────────────────────────────────────┤
-│ + makeDecision(WeatherStrategy&, int totalLaps)                               │
+│ + makeDecision(WeatherStrategy&, int totalLaps)                                │
 │ + logPitStopPhase()                                                            │
 │ + changeTireType()                                                             │
 │ + getCurrentTireType()                                                         │
@@ -99,10 +88,9 @@ The Race Simulator is a text-based racing game built in C++ using the ncurses li
 
 
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                          WeatherStrategy (Abstract)                            │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│ - weatherType: string                                                          │
-│ - rules: unordered_map<string, string>                                         │
+│                          WeatherStrategy (Abstract)                            │├─────────────────────────────────────────────────────────────────────────────────┤
+│ - weatherType: string                                                            │
+│ - rules: unordered_map<string, string>                                           │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │ + getWeatherType(): string (pure virtual)                                      │
 │ + getTireWearMultiplier(): int (pure virtual)                                  │
@@ -114,7 +102,7 @@ The Race Simulator is a text-based racing game built in C++ using the ncurses li
                     │                       │
                     ▼                       ▼
 ┌─────────────────────────┐    ┌─────────────────────────┐
-│    SunnyStrategy        │    │     RainStrategy         │
+│    SunnyStrategy        │    │     RainStrategy        │
 ├─────────────────────────┤    ├─────────────────────────┤
 │ - temperature: int      │    │ - rainIntensity: int    │
 │ - humidity: int         │    │                         │
@@ -136,7 +124,7 @@ The Race Simulator is a text-based racing game built in C++ using the ncurses li
                                 │
                                 ▼
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                              TeamConfig                                        │
+│                              TeamConfig                                         │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │ - name: string                                                                  │
 │ - driver_name: string                                                           │
@@ -158,12 +146,11 @@ The Race Simulator is a text-based racing game built in C++ using the ncurses li
 ┌─────────────────────────────────────────────────────────────────────────────────┐
 │                            RaceConfigParser                                     │
 ├─────────────────────────────────────────────────────────────────────────────────┤
-│ + loadFromFile(filename: string): RaceConfig (static)                          │
-│ + saveToFile(config: RaceConfig, filename: string) (static)                    │
+│ + loadFromFile(filename: string): RaceConfig (static)                           │
 └─────────────────────────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                          SimulationEngine                                      │
+│                          SimulationEngine                                       │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │ - cars: vector<Car>                                                             │
 │ - controllers: vector<CarController>                                            │
@@ -174,7 +161,7 @@ The Race Simulator is a text-based racing game built in C++ using the ncurses li
 │ - weatherChangeCounter: int                                                     │
 │ - max_y, max_x: int                                                             │
 │ - raceConfig: RaceConfig                                                        │
-│ - currentWeatherStrategy: unique_ptr<WeatherStrategy>                          │
+│ - currentWeatherStrategy: unique_ptr<WeatherStrategy>                           │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │ + run()                                                                         │
 │ + drawTrack(start_y, start_x, size)                                             │

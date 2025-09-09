@@ -4,13 +4,9 @@
 SunnyStrategy::SunnyStrategy(int temp, int trackTemp) 
     : temperature(temp), trackTemperature(trackTemp) {
     weatherType = "sunny";
-    
     rules["weather"] = "sunny";
     rules["canSpeedUp"] = "yes";
     rules["goToPitStop"] = "yes";
-    rules["visibility"] = "excellent";
-    rules["grip"] = "optimal";
-    rules["tireStrategy"] = "mixed";
 }
 
 std::string SunnyStrategy::getWeatherType() const {
