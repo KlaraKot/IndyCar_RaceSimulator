@@ -1,7 +1,7 @@
 CMakeFiles/IndyCar_RaceSimulator.dir/src/SimulationEngine.cpp.o: \
   /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/src/SimulationEngine.cpp \
   /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/SimulationEngine.h \
-  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/Car.h \
+  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/car.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config_site \

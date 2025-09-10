@@ -7,7 +7,7 @@
 #include <iostream>
 #include <algorithm>
 
-#include "Car.h"
+#include "car.h"
 #include "CarView.h"
 #include "SunnyStrategy.h"
 #include "RainStrategy.h"
@@ -38,7 +38,7 @@ SimulationEngine::SimulationEngine() : currentWeather("sunny"), weatherChangeCou
         
     }
         
-    currentWeatherStrategy = std::make_unique<SunnyStrategy>(25, 35);
+    currentWeatherStrategy = std::make_shared<SunnyStrategy>(25, 35);
     
     // Create cars based on configuration
     for (int i = 0; i < raceConfig.number_of_cars; ++i) {
@@ -160,7 +160,7 @@ void SimulationEngine::run() {
         
         for (size_t i = 0; i < teams.size(); ++i) {
              if (currentWeatherStrategy) {
-                teams[i].makeDecision(pos_x_track, pos_y_track, *currentWeatherStrategy, raceConfig.number_of_laps);
+                teams[i].makeDecision(pos_x_track, pos_y_track, currentWeatherStrategy, raceConfig.number_of_laps);
             }
             
             // check for lap completion only if car hasn't finished the race

@@ -1,4 +1,4 @@
-#include "Car.h"
+#include "car.h"
 
 #include "Driver.h"
 
@@ -51,7 +51,7 @@ int Car::getTireUseFromType(const std::string& tireType) {
     if (tireType == "S") {
         return 200;  // Soft tires
     } else if (tireType == "H") {
-        return 300;  // Hard tires
+        return 500;  // Hard tires
     } else if (tireType == "W") {
         return 300;  // Wet tires
     } else {

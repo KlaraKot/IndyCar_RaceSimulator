@@ -435,8 +435,8 @@ CMakeFiles/IndyCar_RaceSimulator.dir/src/CarController.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h
- /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/Car.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/CarController.h
+ /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/car.h
 
 CMakeFiles/IndyCar_RaceSimulator.dir/src/CarView.cpp.o
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/src/CarView.cpp
@@ -866,8 +866,8 @@ CMakeFiles/IndyCar_RaceSimulator.dir/src/CarView.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h
- /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/Car.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/CarView.h
+ /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/car.h
 
 CMakeFiles/IndyCar_RaceSimulator.dir/src/RaceConfig.cpp.o
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/src/RaceConfig.cpp
@@ -2217,7 +2217,6 @@ CMakeFiles/IndyCar_RaceSimulator.dir/src/SimulationEngine.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h
- /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/Car.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/CarController.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/CarView.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/Driver.h
@@ -2227,6 +2226,7 @@ CMakeFiles/IndyCar_RaceSimulator.dir/src/SimulationEngine.cpp.o
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/SunnyStrategy.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/Team.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/WeatherStrategy.h
+ /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/car.h
  /usr/local/include/yaml-cpp/binary.h
  /usr/local/include/yaml-cpp/dll.h
  /usr/local/include/yaml-cpp/emitter.h
@@ -3102,9 +3102,9 @@ CMakeFiles/IndyCar_RaceSimulator.dir/src/car.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h
- /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/Car.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/CarController.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/Driver.h
+ /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/car.h
 
 CMakeFiles/IndyCar_RaceSimulator.dir/src/driver.cpp.o
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/src/driver.cpp
@@ -3522,9 +3522,9 @@ CMakeFiles/IndyCar_RaceSimulator.dir/src/driver.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h
- /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/Car.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/CarController.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/Driver.h
+ /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/car.h
 
 CMakeFiles/IndyCar_RaceSimulator.dir/src/main.cpp.o
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/src/main.cpp
@@ -3964,7 +3964,6 @@ CMakeFiles/IndyCar_RaceSimulator.dir/src/main.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h
- /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/Car.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/CarController.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/CarView.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/Driver.h
@@ -3972,6 +3971,7 @@ CMakeFiles/IndyCar_RaceSimulator.dir/src/main.cpp.o
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/SimulationEngine.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/Team.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/WeatherStrategy.h
+ /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/car.h
  /usr/local/include/yaml-cpp/binary.h
  /usr/local/include/yaml-cpp/dll.h
  /usr/local/include/yaml-cpp/emitter.h
@@ -4438,8 +4438,8 @@ CMakeFiles/IndyCar_RaceSimulator.dir/src/team.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h
- /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/Car.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/CarController.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/Team.h
  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/WeatherStrategy.h
+ /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/car.h
 

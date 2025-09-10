@@ -18,7 +18,7 @@ race:
       strategy:
         version: "B"
         first_tire: "H"
-        second_tire: "S"
+        second_tire: "H"
         accident: "no"
         accident_lap: null
     - name: "Team C"

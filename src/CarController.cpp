@@ -5,7 +5,7 @@
 #include <fstream>
 #include <iostream>
 
-#include "Car.h"
+#include "car.h"
 
 CarController::CarController(Car &car) : car(car) {}
 void CarController::moveLeft(int pos_x_track, int pos_y_track, int size) { car.x--; }

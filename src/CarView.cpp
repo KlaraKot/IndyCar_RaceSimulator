@@ -1,4 +1,4 @@
-#include "Car.h"
+#include "car.h"
 #include "CarView.h"
 #include <iostream>
 #include <ncurses.h>

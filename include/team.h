@@ -4,7 +4,7 @@
 #include <string>
 #include <unordered_map>
 
-#include "Car.h"
+#include "car.h"
 #include "CarController.h"
 #include "WeatherStrategy.h"
 
@@ -27,7 +27,7 @@ class Team {
     
     Team(std::string initName, std::string driverName, Car &teamCar, CarController &carController);
 
-    void makeDecision(int x, int y, const WeatherStrategy& weatherStrategy, int totalLaps); 
+    void makeDecision(int x, int y, const std::shared_ptr<WeatherStrategy> weatherStrategy, int totalLaps); 
         
     void logPitStopPhase();
     

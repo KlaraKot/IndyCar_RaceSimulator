@@ -1,5 +1,5 @@
 #include "Team.h"
-#include "Car.h"
+#include "car.h"
 #include "CarController.h"
 
 #include <ncurses.h>
@@ -18,7 +18,7 @@ Team::Team(std::string initName, std::string driverName, Car &teamCar, CarContro
 }
 
 
-void Team::makeDecision(int x, int y, const WeatherStrategy& weatherStrategy, int totalLaps) {
+void Team::makeDecision(int x, int y, const std::shared_ptr<WeatherStrategy> weatherStrategy, int totalLaps) {
     if (teamCar.getCurrentLap() >= totalLaps) {
         return; 
     }
@@ -27,13 +27,13 @@ void Team::makeDecision(int x, int y, const WeatherStrategy& weatherStrategy, in
         triggerAccident();
     }
     
-    int tireWearMultiplier = weatherStrategy.getTireWearMultiplier();
-    int speedMultiplier = weatherStrategy.getSpeedMultiplier();
+    int tireWearMultiplier = weatherStrategy->getTireWearMultiplier();
+    int speedMultiplier = weatherStrategy->getSpeedMultiplier();
     
     int speedIntensity = 1; 
-    if (weatherStrategy.getWeatherType() == "sunny") {
+    if (weatherStrategy->getWeatherType() == "sunny") {
         speedIntensity = 2;
-     } else if (weatherStrategy.getWeatherType() == "rainy") {
+     } else if (weatherStrategy->getWeatherType() == "rainy") {
         speedIntensity = 1;
     }
     

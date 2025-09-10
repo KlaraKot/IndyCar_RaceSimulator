@@ -368,7 +368,7 @@ CMakeFiles/IndyCar_RaceSimulator.dir/src/team.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__node_handle \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional \
-  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/Car.h \
+  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/car.h \
   /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/CarController.h \
   /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/WeatherStrategy.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ncurses.h \

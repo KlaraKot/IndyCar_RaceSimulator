@@ -416,4 +416,4 @@ CMakeFiles/IndyCar_RaceSimulator.dir/src/driver.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/CarController.h \
-  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/Car.h
+  /Users/konkol/Desktop/Klara/IndyCar/IndyCar_RaceSimulator/include/car.h

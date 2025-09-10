@@ -1,7 +1,7 @@
 #ifndef SIMULATION_H
 #define SIMULATION_H
 
-#include "Car.h"
+#include "car.h"
 #include "CarController.h"
 #include "CarView.h"
 #include "Team.h"
@@ -24,7 +24,7 @@ class SimulationEngine
     int weatherChangeCounter;
     int max_y, max_x;
     RaceConfig raceConfig;
-    std::unique_ptr<WeatherStrategy> currentWeatherStrategy;
+    std::shared_ptr<WeatherStrategy> currentWeatherStrategy;
 
 public:
     SimulationEngine();
